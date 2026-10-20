@@ -1,0 +1,10 @@
+Scenario,Observations,Genuine,Intruder,Static_FinalVersion,Naive_Contam_Pct,Naive_SamplesAbsorbed,Safe_FinalVersion,Safe_Contam_Pct,Safe_Freezes,Safe_Adaptations,Latency_ms
+"Scenario_1_Normal_Variation",25,25,0,"v1.0.0",0.0,0,"v1.0.0",0.0,0,0,0.202
+"Scenario_2_Gradual_Evolution",25,25,0,"v1.0.0",0.0,0,"v1.5.0",0.0,0,5,0.836
+"Scenario_3_Sudden_Deviation",25,25,0,"v1.0.0",0.0,0,"v1.0.0",0.0,15,0,0.218
+"Scenario_4_Controlled_Takeover",25,8,17,"v1.0.0",100.0,17,"v1.0.0",0.0,15,0,0.889
+"Scenario_5_Slow_Impersonation_Creep",25,6,19,"v1.0.0",100.0,19,"v1.0.0",0.0,17,0,0.364
+"Scenario_6_Repeated_Suspicious_Bursts",25,20,5,"v1.0.0",100.0,5,"v1.0.0",0.0,17,0,0.36
+"Scenario_7_Contamination_Poisoning",25,19,6,"v1.0.0",100.0,6,"v1.0.0",0.0,0,0,0.241
+"Scenario_8_Freeze_And_Recovery",25,20,5,"v1.0.0",100.0,5,"v1.0.0",0.0,2,0,0.445
+"Scenario_9_Service_Outage_Resilience",25,25,0,"v1.0.0",0.0,0,"v1.1.0",0.0,0,1,0.633

@@ -1,0 +1,19 @@
+{
+  "experiment_name": "RQ4 Adversarial Contamination and Attack Resistance Benchmark",
+  "description": "Evaluates profile integrity under slow creep impersonation, repeated anomalous bursts, and poisoning attacks.",
+  "random_seed": 777,
+  "window_count_per_scenario": 25,
+  "research_questions": ["RQ4"],
+  "scenarios_to_evaluate": [
+    "Scenario_4_Controlled_Takeover",
+    "Scenario_5_Slow_Impersonation_Creep",
+    "Scenario_6_Repeated_Suspicious_Bursts",
+    "Scenario_7_Contamination_Poisoning",
+    "Scenario_8_Freeze_And_Recovery"
+  ],
+  "baselines_to_evaluate": [
+    "STATIC_BASELINE",
+    "CONVENTIONAL_ADAPTATION",
+    "SAFE_ADAPTATION_ENGINE"
+  ]
+}

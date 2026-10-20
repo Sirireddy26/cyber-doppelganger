@@ -1,0 +1,107 @@
+{
+  "verification": {
+    "total_observations": 72,
+    "total_genuine": 58,
+    "total_intruder": 14,
+    "confusion_matrix": {
+      "true_positives": 50,
+      "false_positives": 0,
+      "true_negatives": 14,
+      "false_negatives": 8
+    },
+    "FAR": {
+      "value": 0.0,
+      "status": "VALID",
+      "numerator": 0,
+      "denominator": 14,
+      "unit": "%",
+      "description": "False Acceptance Rate: percentage of intruder observations mistakenly accepted"
+    },
+    "FRR": {
+      "value": 13.793,
+      "status": "VALID",
+      "numerator": 8,
+      "denominator": 58,
+      "unit": "%",
+      "description": "False Rejection Rate: percentage of genuine user observations mistakenly rejected"
+    },
+    "precision": {
+      "value": 1.0,
+      "status": "VALID",
+      "numerator": 50,
+      "denominator": 50,
+      "unit": "ratio [0,1]",
+      "description": "Precision of genuine acceptance decisions"
+    },
+    "recall": {
+      "value": 0.8621,
+      "status": "VALID",
+      "numerator": 50,
+      "denominator": 58,
+      "unit": "ratio [0,1]",
+      "description": "Recall of genuine observations (True Acceptance Rate)"
+    },
+    "f1_score": {
+      "value": 0.9259,
+      "status": "VALID",
+      "unit": "score [0,1]",
+      "description": "Harmonic mean of precision and recall"
+    },
+    "ROC_AUC": {
+      "value": 1.0,
+      "status": "VALID",
+      "unit": "AUC [0,1]",
+      "description": "Area under Receiver Operating Characteristic curve"
+    }
+  },
+  "adaptation": {
+    "profile_contamination_rate": {
+      "value": 0.0,
+      "status": "VALID",
+      "absorbed_samples": 0,
+      "total_intruders": 14,
+      "unit": "%",
+      "description": "Percentage of intruder observations that corrupted the trusted profile"
+    },
+    "contaminated_samples_absorbed": 0,
+    "adaptations_accepted_count": 1,
+    "adaptations_rejected_count": 71,
+    "adaptation_frequency": 0.0139,
+    "freeze_frequency": 0.0417,
+    "legitimate_change_acceptance_rate": {
+      "value": null,
+      "status": "NOT_AVAILABLE",
+      "reason": "No benign drift observations evaluated in this scenario."
+    },
+    "suspicious_change_rejection_rate": {
+      "value": 92.86,
+      "status": "VALID",
+      "rejected_samples": 13,
+      "total_samples": 14,
+      "unit": "%"
+    },
+    "recovery_success_rate": {
+      "value": 33.33,
+      "status": "VALID",
+      "recovery_count": 1,
+      "freeze_count": 3,
+      "unit": "%"
+    },
+    "time_to_adaptation_windows": {
+      "minimum_required_windows": 5,
+      "buffer_capacity": 20,
+      "description": "Configured multi-window accumulation barrier before safe adaptation"
+    }
+  },
+  "operational": {
+    "mean_latency_ms": 0.3093,
+    "median_latency_ms": 0.2044,
+    "p95_latency_ms": 0.8047,
+    "p99_latency_ms": 1.8646,
+    "min_latency_ms": 0.1905,
+    "max_latency_ms": 2.466,
+    "throughput_obs_per_sec": 3232.87,
+    "sample_count": 72,
+    "status": "VALID"
+  }
+}

@@ -1,0 +1,21 @@
+% Table 2: Comparative Profile Management Benchmark
+\begin{table*}[t]
+\centering
+\caption{Comparative Profile Management Benchmark: Static vs. Naive vs. Proposed Safe Adaptation}
+\label{tab:adaptation_comparison}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Scenario} & \textbf{Observations} & \textbf{Intruders} & \textbf{Static Version} & \textbf{Naive Contam.} & \textbf{Safe Contam.} & \textbf{Safe Freeze / Version} \\
+\midrule
+S1 Normal Variation & 25 & 0 & v1.0.0 & 0.0\% & \textbf{0.0\%} & v1.0.0 (F=0) \\
+S2 Gradual Evolution & 25 & 0 & v1.0.0 & 0.0\% & \textbf{0.0\%} & v1.5.0 (F=0) \\
+S3 Sudden Deviation & 25 & 0 & v1.0.0 & 0.0\% & \textbf{0.0\%} & v1.0.0 (F=15) \\
+S4 Controlled Takeover & 25 & 17 & v1.0.0 & 100.0\% & \textbf{0.0\%} & v1.0.0 (F=15) \\
+S5 Slow Impersonation Creep & 25 & 19 & v1.0.0 & 100.0\% & \textbf{0.0\%} & v1.0.0 (F=17) \\
+S6 Repeated Suspicious Bursts & 25 & 5 & v1.0.0 & 100.0\% & \textbf{0.0\%} & v1.0.0 (F=17) \\
+S7 Contamination Poisoning & 25 & 6 & v1.0.0 & 100.0\% & \textbf{0.0\%} & v1.0.0 (F=0) \\
+S8 Freeze And Recovery & 25 & 5 & v1.0.0 & 100.0\% & \textbf{0.0\%} & v1.0.0 (F=2) \\
+S9 Service Outage Resilience & 25 & 0 & v1.0.0 & 0.0\% & \textbf{0.0\%} & v1.1.0 (F=0) \\
+\bottomrule
+\end{tabular}
+\end{table*}

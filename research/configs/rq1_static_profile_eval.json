@@ -1,0 +1,15 @@
+{
+  "experiment_name": "RQ1 Static Profile Identification Benchmark",
+  "description": "Evaluates how effectively an immutable static baseline profile detects deviations while failing to accommodate legitimate evolution.",
+  "random_seed": 101,
+  "window_count_per_scenario": 25,
+  "research_questions": ["RQ1"],
+  "scenarios_to_evaluate": [
+    "Scenario_1_Normal_Variation",
+    "Scenario_2_Gradual_Evolution",
+    "Scenario_4_Controlled_Takeover"
+  ],
+  "baselines_to_evaluate": [
+    "STATIC_BASELINE"
+  ]
+}

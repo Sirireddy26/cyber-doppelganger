@@ -1,0 +1,26 @@
+{
+  "experiment_id": "exp_20261013_110638_ea7e30",
+  "created_at": "2026-10-13 05:36:38 UTC",
+  "random_seed": 42,
+  "status": "COMPLETED_SUCCESSFULLY",
+  "files": {
+    "config": "C:\\Users\\sirir\\Desktop\\Cyber Doppelganger Project\\cyber-doppelganger\\research\\results\\exp_20261013_110638_ea7e30\\config.json",
+    "raw_results": "C:\\Users\\sirir\\Desktop\\Cyber Doppelganger Project\\cyber-doppelganger\\research\\results\\exp_20261013_110638_ea7e30\\raw_results.json",
+    "metrics": "C:\\Users\\sirir\\Desktop\\Cyber Doppelganger Project\\cyber-doppelganger\\research\\results\\exp_20261013_110638_ea7e30\\metrics.json",
+    "report": "C:\\Users\\sirir\\Desktop\\Cyber Doppelganger Project\\cyber-doppelganger\\research\\results\\exp_20261013_110638_ea7e30\\research_report.md",
+    "tables": [
+      "C:\\Users\\sirir\\Desktop\\Cyber Doppelganger Project\\cyber-doppelganger\\research\\results\\exp_20261013_110638_ea7e30\\tables\\scenario_comparison.csv",
+      "C:\\Users\\sirir\\Desktop\\Cyber Doppelganger Project\\cyber-doppelganger\\research\\results\\exp_20261013_110638_ea7e30\\tables\\table1_verification_metrics.tex",
+      "C:\\Users\\sirir\\Desktop\\Cyber Doppelganger Project\\cyber-doppelganger\\research\\results\\exp_20261013_110638_ea7e30\\tables\\table2_adaptation_metrics.tex",
+      "C:\\Users\\sirir\\Desktop\\Cyber Doppelganger Project\\cyber-doppelganger\\research\\results\\exp_20261013_110638_ea7e30\\tables\\table3_operational_performance.tex"
+    ],
+    "figures": [
+      "C:\\Users\\sirir\\Desktop\\Cyber Doppelganger Project\\cyber-doppelganger\\research\\results\\exp_20261013_110638_ea7e30\\figures\\fig1_verification_decisions.svg",
+      "C:\\Users\\sirir\\Desktop\\Cyber Doppelganger Project\\cyber-doppelganger\\research\\results\\exp_20261013_110638_ea7e30\\figures\\fig2_legitimate_vs_suspicious.svg",
+      "C:\\Users\\sirir\\Desktop\\Cyber Doppelganger Project\\cyber-doppelganger\\research\\results\\exp_20261013_110638_ea7e30\\figures\\fig3_profile_contamination.svg",
+      "C:\\Users\\sirir\\Desktop\\Cyber Doppelganger Project\\cyber-doppelganger\\research\\results\\exp_20261013_110638_ea7e30\\figures\\fig4_drift_and_adaptation_trajectory.svg",
+      "C:\\Users\\sirir\\Desktop\\Cyber Doppelganger Project\\cyber-doppelganger\\research\\results\\exp_20261013_110638_ea7e30\\figures\\fig5_latency_distributions.svg",
+      "C:\\Users\\sirir\\Desktop\\Cyber Doppelganger Project\\cyber-doppelganger\\research\\results\\exp_20261013_110638_ea7e30\\figures\\fig6_freeze_recovery_lifecycle.svg"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+# Cyber Doppelgänger - Desktop Behavioural Agent Dependencies
+# Phase 1 Foundation Dependencies (Python 3.11+)
+
+# Hardware & System State Context (Ready for Phase 2)
+psutil>=5.9.8
+
+# Low-level Input Hooks Interface (Ready for Phase 2)
+pynput>=1.7.7
+
+# Numerical and Data Processing (Ready for Phase 2)
+numpy>=1.26.0
+pandas>=2.2.0
+
+# Machine Learning & Scaling (Ready for Phase 2)
+scikit-learn>=1.4.0
+
+# HTTP Transport
+requests>=2.31.0

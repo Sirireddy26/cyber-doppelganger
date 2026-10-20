@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+:root {
+  --bg-main: #ECE5F6;
+  --card-bg: #F5F0FB;
+  --soft-lavender: #E4DAF5;
+  --powder-blue: #D8E7F7;
+  --soft-mint: #CCEBD4;
+  --warm-peach: #F8DAC0;
+  --dusty-rose: #F5CCD7;
+  --lilac-accent: #D2C1EC;
+  --primary-accent: #7864D1;
+  --primary-accent-hover: #6752C4;
+  --text-dark: #1E2638;
+  --text-secondary: #4A5568;
+  --border-color: #C8B8E4;
+}
+
+body {
+  background-color: #ECE5F6;
+  color: #1E2638;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: #ECE5F6;
+}
+
+/* Filled Pastel Research Lab Theme Tokens */
+.card-pastel-lavender {
+  background-color: #F1EBFA;
+  border: 1px solid #D2C4EB;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(30, 38, 56, 0.05);
+}
+
+.card-pastel-blue {
+  background-color: #EBF3FB;
+  border: 1px solid #BFD6EE;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(30, 38, 56, 0.05);
+}
+
+.card-pastel-mint {
+  background-color: #CCEBD4;
+  border: 1px solid #9CD6A8;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(30, 38, 56, 0.05);
+}
+
+.card-pastel-peach {
+  background-color: #F8DAC0;
+  border: 1px solid #EDB482;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(30, 38, 56, 0.05);
+}
+
+.card-pastel-rose {
+  background-color: #F5CCD7;
+  border: 1px solid #E49DAE;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(30, 38, 56, 0.05);
+}
+
+.btn-primary {
+  background-color: #7864D1;
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  transition: all 0.15s ease-in-out;
+}
+.btn-primary:hover:not(:disabled) {
+  background-color: #6752C4;
+}
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.badge-mint {
+  background-color: #CCEBD4;
+  color: #0F5132;
+  border: 1px solid #9EDAA9;
+}
+
+.badge-peach {
+  background-color: #F8DAC0;
+  color: #7C2D12;
+  border: 1px solid #F0BF94;
+}
+
+.badge-rose {
+  background-color: #F5CCD7;
+  color: #881337;
+  border: 1px solid #EAAAB9;
+}
+
+.badge-lavender {
+  background-color: #E4DAF5;
+  color: #431E8C;
+  border: 1px solid #C8B8E4;
+}
+
+.badge-powder {
+  background-color: #D8E7F7;
+  color: #0A3B7B;
+  border: 1px solid #ADC9EE;
+}

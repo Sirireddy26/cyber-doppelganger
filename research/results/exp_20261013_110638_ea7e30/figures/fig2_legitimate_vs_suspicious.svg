@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420" style="background:#0f172a;font-family:Inter,system-ui,sans-serif;">
+<text x="40" y="35" fill="#f8fafc" font-size="16" font-weight="bold">Figure 2: Adaptation Trade-Off: Legitimate Accommodation vs Contamination Resistance</text>
+<text x="40" y="55" fill="#94a3b8" font-size="12">Legitimate Benign Acceptance Rate (100%) vs Suspicious Attack Rejection Rate (100%)</text>
+<rect x="80" y="80" width="680" height="270" fill="#1e293b" rx="6" stroke="#334155"/>
+<line x1="80" y1="350" x2="760" y2="350" stroke="#64748b" stroke-width="2"/>
+<line x1="80" y1="80" x2="80" y2="350" stroke="#64748b" stroke-width="2"/>
+<rect x="420" y="80" width="340" height="135" fill="#047857" opacity="0.15"/>
+<text x="590" y="150" fill="#34d399" font-size="13" font-weight="bold" text-anchor="middle">Optimal Safe Operation (100%, 100%)</text>
+<circle cx="720" cy="110" r="12" fill="#3b82f6" stroke="#60a5fa" stroke-width="3"/>
+<text x="700" y="95" fill="#60a5fa" font-size="12" font-weight="bold" text-anchor="end">Proposed Safe Engine</text>
+<circle cx="720" cy="330" r="10" fill="#f43f5e" stroke="#fb7185" stroke-width="2"/>
+<text x="700" y="335" fill="#fb7185" font-size="11" text-anchor="end">Naive Sliding Window (0% Rejection)</text>
+<circle cx="120" cy="110" r="10" fill="#f59e0b" stroke="#fbbf24" stroke-width="2"/>
+<text x="140" y="115" fill="#fbbf24" font-size="11">Static Profile (0% Legitimate Drift)</text>
+<text x="420" y="385" fill="#94a3b8" font-size="12" text-anchor="middle">Legitimate Change Accommodation Rate (%)</text>
+<text x="30" y="215" fill="#94a3b8" font-size="12" transform="rotate(-90 30 215)" text-anchor="middle">Suspicious Change Rejection Rate (%)</text>
+</svg>

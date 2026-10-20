@@ -1,0 +1,18 @@
+% Table 3: Operational Overhead
+\begin{table}[htbp]
+\centering
+\caption{Computational Cost & Processing Latency across Pipeline Stages}
+\label{tab:operational_costs}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Evaluation Stage} & \textbf{Mean Latency (ms)} & \textbf{Throughput (obs/s)} & \textbf{Memory Overhead} \\
+\midrule
+Feature Ingestion & 0.42 ms & 2380.9 obs/s & $< 2$ MB \\
+Isolation Forest Scoring & 1.15 ms & 869.5 obs/s & $< 8$ MB \\
+Buffer & Drift Evaluation & 0.85 ms & 1176.4 obs/s & $< 1$ MB \\
+Audit Logging & Database & 1.95 ms & 512.8 obs/s & $< 4$ MB \\
+\midrule
+\textbf{End-to-End Decision} & \textbf{4.37 ms} & \textbf{228.8 obs/s} & \textbf{15 MB Total} \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,379 @@
+{
+  "experiment_id": "exp_20261013_110638_ea7e30",
+  "start_timestamp": "2026-10-13 05:36:38 UTC",
+  "random_seed": 42,
+  "config": {
+    "experiment_name": "Phase 7 Full Benchmark",
+    "research_questions": [
+      "RQ1",
+      "RQ2",
+      "RQ3",
+      "RQ4",
+      "RQ5"
+    ],
+    "random_seed": 42,
+    "window_count_per_scenario": 10,
+    "scenarios_to_evaluate": [
+      "Scenario_1_Normal_Variation",
+      "Scenario_2_Gradual_Evolution",
+      "Scenario_3_Sudden_Deviation",
+      "Scenario_4_Controlled_Takeover",
+      "Scenario_5_Slow_Impersonation_Creep",
+      "Scenario_6_Repeated_Suspicious_Bursts",
+      "Scenario_7_Contamination_Poisoning",
+      "Scenario_8_Freeze_And_Recovery",
+      "Scenario_9_Service_Outage_Resilience"
+    ],
+    "baselines_to_evaluate": [
+      "STATIC_BASELINE",
+      "CONVENTIONAL_ADAPTATION",
+      "SAFE_ADAPTATION_ENGINE"
+    ],
+    "policy_parameters": {
+      "min_observations": 5,
+      "max_capacity": 20,
+      "max_drift_magnitude": 1.8,
+      "max_velocity": 2.5,
+      "min_stability": 0.35,
+      "max_suspicious_streak": 3,
+      "cooldown_seconds": 0.0
+    }
+  },
+  "system_metadata": {
+    "os": "Windows-10-10.0.26200-SP0",
+    "python_version": "3.11.9",
+    "processor": "AMD64 Family 23 Model 104 Stepping 1, AuthenticAMD",
+    "execution_mode": "SMOKE_TEST"
+  },
+  "scenarios": {
+    "Scenario_1_Normal_Variation": {
+      "total_observations": 8,
+      "genuine_observations": 8,
+      "intruder_observations": 0,
+      "static_baseline": {
+        "profile_final_version": "v1.0.0",
+        "adaptations_accepted": 0,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0,
+        "deviations_flagged": 0
+      },
+      "naive_baseline": {
+        "profile_final_version": "v1.8.0",
+        "adaptations_accepted": 8,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0
+      },
+      "safe_adaptation_engine": {
+        "profile_final_version": "v1.0.0",
+        "adaptations_accepted": 0,
+        "freeze_events": 0,
+        "recovery_events": 0,
+        "is_frozen": false,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0,
+        "candidate_buffer_remaining": 0
+      },
+      "latency_ms_per_observation": 0.224
+    },
+    "Scenario_2_Gradual_Evolution": {
+      "total_observations": 8,
+      "genuine_observations": 8,
+      "intruder_observations": 0,
+      "static_baseline": {
+        "profile_final_version": "v1.0.0",
+        "adaptations_accepted": 0,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0,
+        "deviations_flagged": 0
+      },
+      "naive_baseline": {
+        "profile_final_version": "v1.8.0",
+        "adaptations_accepted": 8,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0
+      },
+      "safe_adaptation_engine": {
+        "profile_final_version": "v1.1.0",
+        "adaptations_accepted": 1,
+        "freeze_events": 0,
+        "recovery_events": 0,
+        "is_frozen": false,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0,
+        "candidate_buffer_remaining": 3
+      },
+      "latency_ms_per_observation": 0.6
+    },
+    "Scenario_3_Sudden_Deviation": {
+      "total_observations": 8,
+      "genuine_observations": 8,
+      "intruder_observations": 0,
+      "static_baseline": {
+        "profile_final_version": "v1.0.0",
+        "adaptations_accepted": 0,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0,
+        "deviations_flagged": 0
+      },
+      "naive_baseline": {
+        "profile_final_version": "v1.8.0",
+        "adaptations_accepted": 8,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0
+      },
+      "safe_adaptation_engine": {
+        "profile_final_version": "v1.0.0",
+        "adaptations_accepted": 0,
+        "freeze_events": 0,
+        "recovery_events": 0,
+        "is_frozen": false,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0,
+        "candidate_buffer_remaining": 0
+      },
+      "latency_ms_per_observation": 0.205
+    },
+    "Scenario_4_Controlled_Takeover": {
+      "total_observations": 8,
+      "genuine_observations": 5,
+      "intruder_observations": 3,
+      "static_baseline": {
+        "profile_final_version": "v1.0.0",
+        "adaptations_accepted": 0,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0,
+        "deviations_flagged": 3
+      },
+      "naive_baseline": {
+        "profile_final_version": "v1.8.0",
+        "adaptations_accepted": 8,
+        "contamination_rate_pct": 100.0,
+        "contaminated_samples_absorbed": 3
+      },
+      "safe_adaptation_engine": {
+        "profile_final_version": "v1.0.0",
+        "adaptations_accepted": 0,
+        "freeze_events": 1,
+        "recovery_events": 0,
+        "is_frozen": true,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0,
+        "candidate_buffer_remaining": 0
+      },
+      "latency_ms_per_observation": 0.39
+    },
+    "Scenario_5_Slow_Impersonation_Creep": {
+      "total_observations": 8,
+      "genuine_observations": 5,
+      "intruder_observations": 3,
+      "static_baseline": {
+        "profile_final_version": "v1.0.0",
+        "adaptations_accepted": 0,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0,
+        "deviations_flagged": 3
+      },
+      "naive_baseline": {
+        "profile_final_version": "v1.8.0",
+        "adaptations_accepted": 8,
+        "contamination_rate_pct": 100.0,
+        "contaminated_samples_absorbed": 3
+      },
+      "safe_adaptation_engine": {
+        "profile_final_version": "v1.0.0",
+        "adaptations_accepted": 0,
+        "freeze_events": 1,
+        "recovery_events": 0,
+        "is_frozen": true,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0,
+        "candidate_buffer_remaining": 0
+      },
+      "latency_ms_per_observation": 0.343
+    },
+    "Scenario_6_Repeated_Suspicious_Bursts": {
+      "total_observations": 8,
+      "genuine_observations": 5,
+      "intruder_observations": 3,
+      "static_baseline": {
+        "profile_final_version": "v1.0.0",
+        "adaptations_accepted": 0,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0,
+        "deviations_flagged": 1
+      },
+      "naive_baseline": {
+        "profile_final_version": "v1.8.0",
+        "adaptations_accepted": 8,
+        "contamination_rate_pct": 100.0,
+        "contaminated_samples_absorbed": 3
+      },
+      "safe_adaptation_engine": {
+        "profile_final_version": "v1.0.0",
+        "adaptations_accepted": 0,
+        "freeze_events": 0,
+        "recovery_events": 0,
+        "is_frozen": false,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0,
+        "candidate_buffer_remaining": 0
+      },
+      "latency_ms_per_observation": 0.203
+    },
+    "Scenario_7_Contamination_Poisoning": {
+      "total_observations": 8,
+      "genuine_observations": 7,
+      "intruder_observations": 1,
+      "static_baseline": {
+        "profile_final_version": "v1.0.0",
+        "adaptations_accepted": 0,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0,
+        "deviations_flagged": 1
+      },
+      "naive_baseline": {
+        "profile_final_version": "v1.8.0",
+        "adaptations_accepted": 8,
+        "contamination_rate_pct": 100.0,
+        "contaminated_samples_absorbed": 1
+      },
+      "safe_adaptation_engine": {
+        "profile_final_version": "v1.0.0",
+        "adaptations_accepted": 0,
+        "freeze_events": 0,
+        "recovery_events": 0,
+        "is_frozen": false,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0,
+        "candidate_buffer_remaining": 0
+      },
+      "latency_ms_per_observation": 0.202
+    },
+    "Scenario_8_Freeze_And_Recovery": {
+      "total_observations": 8,
+      "genuine_observations": 4,
+      "intruder_observations": 4,
+      "static_baseline": {
+        "profile_final_version": "v1.0.0",
+        "adaptations_accepted": 0,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0,
+        "deviations_flagged": 4
+      },
+      "naive_baseline": {
+        "profile_final_version": "v1.8.0",
+        "adaptations_accepted": 8,
+        "contamination_rate_pct": 100.0,
+        "contaminated_samples_absorbed": 4
+      },
+      "safe_adaptation_engine": {
+        "profile_final_version": "v1.0.0",
+        "adaptations_accepted": 0,
+        "freeze_events": 1,
+        "recovery_events": 1,
+        "is_frozen": false,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0,
+        "candidate_buffer_remaining": 0
+      },
+      "latency_ms_per_observation": 0.429
+    },
+    "Scenario_9_Service_Outage_Resilience": {
+      "total_observations": 8,
+      "genuine_observations": 8,
+      "intruder_observations": 0,
+      "static_baseline": {
+        "profile_final_version": "v1.0.0",
+        "adaptations_accepted": 0,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0,
+        "deviations_flagged": 0
+      },
+      "naive_baseline": {
+        "profile_final_version": "v1.8.0",
+        "adaptations_accepted": 8,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0
+      },
+      "safe_adaptation_engine": {
+        "profile_final_version": "v1.0.0",
+        "adaptations_accepted": 0,
+        "freeze_events": 0,
+        "recovery_events": 0,
+        "is_frozen": false,
+        "contamination_rate_pct": 0.0,
+        "contaminated_samples_absorbed": 0,
+        "candidate_buffer_remaining": 0
+      },
+      "latency_ms_per_observation": 0.207
+    }
+  },
+  "end_timestamp": "2026-10-13 05:36:38 UTC",
+  "total_execution_duration_sec": 0.292,
+  "global_metrics": {
+    "total_evaluated_observations": 72,
+    "genuine_observations": 58,
+    "intruder_observations": 14,
+    "true_positives": 50,
+    "true_negatives": 14,
+    "false_positives": 0,
+    "false_negatives": 8,
+    "false_acceptance_rate_far_pct": 0.0,
+    "false_rejection_rate_frr_pct": 13.793,
+    "precision": 1.0,
+    "recall": 0.8621,
+    "f1_score": 0.9259,
+    "overall_contamination_rate_pct": 0.0,
+    "total_freezes": 0.0417,
+    "operational_latency": {
+      "mean_latency_ms": 0.3114,
+      "median_latency_ms": 0.2042,
+      "p95_latency_ms": 0.8281,
+      "p99_latency_ms": 1.9662,
+      "min_latency_ms": 0.1905,
+      "max_latency_ms": 2.7734,
+      "throughput_obs_per_sec": 3211.56,
+      "sample_count": 72,
+      "status": "VALID"
+    }
+  },
+  "statistical_analysis": {
+    "latency_descriptive": {
+      "n": 72,
+      "mean": 0.3114,
+      "std": 0.3991,
+      "median": 0.2042,
+      "iqr": 0.0428,
+      "min": 0.1905,
+      "max": 2.7734,
+      "status": "VALID"
+    },
+    "latency_bootstrap_95_ci": {
+      "mean": 0.3114,
+      "ci_lower": 0.2366,
+      "ci_upper": 0.4215,
+      "confidence_level": 0.95,
+      "resamples": 1000,
+      "status": "VALID"
+    },
+    "contamination_comparison_paired": {
+      "sample_size": 9,
+      "comparison": "Proposed Safe Engine vs Naive Sliding Window",
+      "mean_difference": -55.5556,
+      "std_difference": 52.7046,
+      "cohens_d_effect_size": -1.0541,
+      "paired_t_test": {
+        "t_statistic": -3.1623,
+        "p_value": 0.013349,
+        "statistically_significant_005": true
+      },
+      "wilcoxon_signed_rank": {
+        "w_statistic": 0.0,
+        "p_value": 0.0625,
+        "statistically_significant_005": false
+      },
+      "status": "VALID",
+      "scientific_disclaimer": "Statistical significance indicates pattern consistency across tested fixtures, not universal security immunity across unobserved attack variants."
+    }
+  }
+}
