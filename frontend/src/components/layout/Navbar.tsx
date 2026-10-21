@@ -21,40 +21,42 @@ export const Navbar: React.FC<NavbarProps> = ({
   onRefresh 
 }) => {
   return (
-    <header className="border-b border-[#CDBEE7] bg-[#E8DEF6] sticky top-0 z-50 shadow-xs">
+    <header className="border-b border-[#271C3D] bg-[#0E0A1A]/95 backdrop-blur-md sticky top-0 z-50 shadow-md">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 rounded-xl bg-[#D7C4F2] border border-[#BFABEB] flex items-center justify-center text-[#593CA5]">
-            <Shield className="w-5 h-5" />
+          <div className="w-10 h-10 rounded-xl bg-[#1C1333] border border-[#3E296A] flex items-center justify-center text-[#A78BFA] shadow-xs">
+            <Shield className="w-5 h-5 text-[#8B5CF6]" />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-bold text-base tracking-tight text-[#1E2638]">
+              <span className="font-extrabold text-base tracking-tight text-white">
                 Cyber Doppelgänger
               </span>
-              <span className="text-[11px] font-bold tracking-wide px-2.5 py-0.5 rounded-full bg-[#D7C4F2] text-[#431E8C] border border-[#BFABEB]">
-                Research Lab
+              <span className="text-[11px] font-bold tracking-wide px-2.5 py-0.5 rounded-full bg-[#20143B] text-[#C4B5FD] border border-[#432C73]">
+                Security Operations
               </span>
             </div>
-            <p className="text-xs text-[#505E75]">Continuous Behavioural Verification &amp; Safe Adaptation</p>
+            <p className="text-xs text-[#8E7FA8]">Continuous Behavioural Biometrics &amp; Safe Adaptation</p>
           </div>
         </div>
 
         <div className="flex items-center space-x-2 sm:space-x-3">
           {/* Backend Status */}
-          <div className="flex items-center gap-1.5 px-3 py-1 rounded-xl border text-xs font-mono font-medium"
+          <div 
+            className="flex items-center gap-1.5 px-3 py-1 rounded-xl border text-xs font-mono font-medium transition-all"
             style={{
-              backgroundColor: backendOnline === true ? '#CCEBD4' : backendOnline === false ? '#F5CCD7' : '#E0D4F5',
-              borderColor: backendOnline === true ? '#9EDAA9' : backendOnline === false ? '#EAAAB9' : '#C4B2E5',
-              color: backendOnline === true ? '#0F5132' : backendOnline === false ? '#881337' : '#4A5568'
-            }}>
+              backgroundColor: backendOnline === true ? '#1A1230' : backendOnline === false ? '#2D1226' : '#140E24',
+              borderColor: backendOnline === true ? '#432C73' : backendOnline === false ? '#5E1E49' : '#2A1D45',
+              color: backendOnline === true ? '#C4B5FD' : backendOnline === false ? '#F472B6' : '#8E7FA8'
+            }}
+          >
             <span
               className={`w-2.5 h-2.5 rounded-full ${
                 backendOnline === true
-                  ? 'bg-[#15803D]'
+                  ? 'bg-[#8B5CF6] shadow-[0_0_8px_#8B5CF6]'
                   : backendOnline === false
-                  ? 'bg-[#E11D48]'
-                  : 'bg-[#D97706] animate-pulse'
+                  ? 'bg-[#E11D48] shadow-[0_0_8px_#E11D48]'
+                  : 'bg-[#A855F7] animate-pulse'
               }`}
             />
             <span>
@@ -63,19 +65,21 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           {/* DB Status */}
-          <div className="hidden lg:flex items-center gap-1.5 px-3 py-1 rounded-xl border text-xs font-mono font-medium"
+          <div 
+            className="hidden lg:flex items-center gap-1.5 px-3 py-1 rounded-xl border text-xs font-mono font-medium"
             style={{
-              backgroundColor: dbOnline === true ? '#D8E7F7' : dbOnline === false ? '#F5CCD7' : '#E0D4F5',
-              borderColor: dbOnline === true ? '#ADC9EE' : dbOnline === false ? '#EAAAB9' : '#C4B2E5',
-              color: dbOnline === true ? '#0A3B7B' : dbOnline === false ? '#881337' : '#4A5568'
-            }}>
+              backgroundColor: dbOnline === true ? '#1A1230' : dbOnline === false ? '#2D1226' : '#140E24',
+              borderColor: dbOnline === true ? '#432C73' : dbOnline === false ? '#5E1E49' : '#2A1D45',
+              color: dbOnline === true ? '#C4B5FD' : dbOnline === false ? '#F472B6' : '#8E7FA8'
+            }}
+          >
             <span
               className={`w-2.5 h-2.5 rounded-full ${
                 dbOnline === true
-                  ? 'bg-[#1D4ED8]'
+                  ? 'bg-[#8B5CF6]'
                   : dbOnline === false
                   ? 'bg-[#E11D48]'
-                  : 'bg-[#94A3B8]'
+                  : 'bg-[#6B5D88]'
               }`}
             />
             <span>
@@ -84,19 +88,21 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           {/* ML Status */}
-          <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-xl border text-xs font-mono font-medium"
+          <div 
+            className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-xl border text-xs font-mono font-medium"
             style={{
-              backgroundColor: mlOnline === true ? '#DDD0F2' : mlOnline === false ? '#F5CCD7' : '#E0D4F5',
-              borderColor: mlOnline === true ? '#BFA9E4' : mlOnline === false ? '#EAAAB9' : '#C4B2E5',
-              color: mlOnline === true ? '#431E8C' : mlOnline === false ? '#881337' : '#4A5568'
-            }}>
+              backgroundColor: mlOnline === true ? '#1A1230' : mlOnline === false ? '#2D1226' : '#140E24',
+              borderColor: mlOnline === true ? '#432C73' : mlOnline === false ? '#5E1E49' : '#2A1D45',
+              color: mlOnline === true ? '#C4B5FD' : mlOnline === false ? '#F472B6' : '#8E7FA8'
+            }}
+          >
             <span
               className={`w-2.5 h-2.5 rounded-full ${
                 mlOnline === true
-                  ? 'bg-[#7C3AED]'
+                  ? 'bg-[#8B5CF6] shadow-[0_0_8px_#8B5CF6]'
                   : mlOnline === false
                   ? 'bg-[#E11D48]'
-                  : 'bg-[#94A3B8]'
+                  : 'bg-[#6B5D88]'
               }`}
             />
             <span>
@@ -106,20 +112,22 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Profile Status */}
           {profileStatus && (
-            <div className="hidden xl:flex items-center gap-1.5 px-3 py-1 rounded-xl bg-[#DDD0F2] border border-[#BFA9E4] text-xs font-mono text-[#431E8C] font-medium">
+            <div className="hidden xl:flex items-center gap-1.5 px-3 py-1 rounded-xl bg-[#1A1230] border border-[#432C73] text-xs font-mono text-[#C4B5FD] font-medium">
               <span>Profile: {profileStatus}</span>
             </div>
           )}
 
           {/* Adaptation Status */}
           {adaptationFrozen !== undefined && adaptationFrozen !== null && (
-            <div className="hidden md:flex items-center gap-1.5 px-3 py-1 rounded-xl border text-xs font-mono font-medium"
+            <div 
+              className="hidden md:flex items-center gap-1.5 px-3 py-1 rounded-xl border text-xs font-mono font-medium"
               style={{
-                backgroundColor: adaptationFrozen ? '#F5CCD7' : '#DDD0F2',
-                borderColor: adaptationFrozen ? '#EAAAB9' : '#BFA9E4',
-                color: adaptationFrozen ? '#881337' : '#431E8C'
-              }}>
-              <span className={`w-2.5 h-2.5 rounded-full ${adaptationFrozen ? 'bg-[#E11D48]' : 'bg-[#7C3AED]'}`} />
+                backgroundColor: adaptationFrozen ? '#2D1226' : '#1A1230',
+                borderColor: adaptationFrozen ? '#5E1E49' : '#432C73',
+                color: adaptationFrozen ? '#F472B6' : '#C4B5FD'
+              }}
+            >
+              <span className={`w-2.5 h-2.5 rounded-full ${adaptationFrozen ? 'bg-[#E11D48]' : 'bg-[#8B5CF6]'}`} />
               <span>{adaptationFrozen ? 'FROZEN' : 'ACTIVE'}</span>
             </div>
           )}
@@ -130,9 +138,9 @@ export const Navbar: React.FC<NavbarProps> = ({
             disabled={loading}
             title="Refresh system diagnostics"
             aria-label="Refresh diagnostics"
-            className="p-2 rounded-xl bg-[#D7C4F2] border border-[#BFABEB] hover:bg-[#CBB4ED] text-[#1E2638] transition-colors cursor-pointer"
+            className="p-2 rounded-xl bg-[#1A1230] border border-[#3E296A] hover:bg-[#251A44] hover:border-[#8B5CF6] text-[#C4B5FD] transition-all cursor-pointer shadow-xs"
           >
-            <RefreshCw className={`w-4 h-4 text-[#431E8C] ${loading ? 'animate-spin' : ''}`} />
+            <RefreshCw className={`w-4 h-4 text-[#A78BFA] ${loading ? 'animate-spin' : ''}`} />
           </button>
         </div>
       </div>

@@ -5,12 +5,12 @@ import {
   TrendingUp, 
   RotateCcw, 
   Terminal, 
-  Zap,
-  Info,
-  CheckCircle2,
-  AlertCircle,
-  AlertTriangle,
-  FlaskConical
+  Zap, 
+  Info, 
+  CheckCircle2, 
+  AlertCircle, 
+  AlertTriangle, 
+  FlaskConical 
 } from 'lucide-react';
 import { ApiService } from '../../services/api';
 
@@ -175,125 +175,125 @@ export const ResearchSimulators: React.FC<{ onScenarioComplete?: () => void }> =
 
   return (
     <div className="space-y-6">
-      {/* Prominent Mandatory Academic Transparency Banner - Filled Warm Amber/Peach */}
-      <div className="bg-[#FEF0DC] border-2 border-[#FCD49F] rounded-2xl p-5 space-y-2 shadow-xs">
-        <div className="flex items-center gap-2 text-[#78350F]">
-          <FlaskConical className="w-5 h-5 flex-shrink-0 text-[#C25E00]" />
-          <h2 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider">
+      {/* Transparency Banner */}
+      <div className="bg-[#161026] border border-[#382759] rounded-2xl p-5 space-y-2 shadow-sm">
+        <div className="flex items-center gap-2 text-white">
+          <FlaskConical className="w-5 h-5 flex-shrink-0 text-[#8B5CF6]" />
+          <h2 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-white">
             SIMULATION — CONTROLLED DEMONSTRATION, NOT PROOF OF REAL-WORLD ATTACK DETECTION
           </h2>
         </div>
-        <p className="text-xs text-[#78350F] leading-relaxed font-medium">
+        <p className="text-xs text-[#9D8EB9] leading-relaxed font-medium">
           These simulator scenarios utilize calibrated synthetic biometric vectors to evaluate the behavioral state machine (drift bounding, candidate buffer thresholds, and streak freeze protections). Synthetic functional test events are segregated from empirical evaluation data.
         </p>
       </div>
 
-      {/* Scenario Action Cards - Distinctly Colored Filled Pastel Cards */}
+      {/* Scenario Action Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         
-        {/* Scenario 1 Card - Filled Soft Mint */}
-        <div className="bg-[#CCEBD4] border border-[#9CD6A8] rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-sm">
+        {/* Scenario 1 Card */}
+        <div className="bg-[#120D1F] border border-[#271C3D] hover:border-[#382759] rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl transition-all">
           <div className="space-y-3">
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2 text-[#0F5132]">
-                <TrendingUp className="w-4 h-4" />
-                <h3 className="font-extrabold text-xs uppercase tracking-wider text-[#0F5132]">
+              <div className="flex items-center gap-2 text-[#C4B5FD]">
+                <TrendingUp className="w-4 h-4 text-[#8B5CF6]" />
+                <h3 className="font-extrabold text-xs uppercase tracking-wider text-white">
                   Scenario 1: Legitimate Drift
                 </h3>
               </div>
-              <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-[#B3E3BE] text-[#0A4126] border border-[#8ED49C]">
+              <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-[#1C142E] text-[#C4B5FD] border border-[#382759]">
                 Synthetic Control
               </span>
             </div>
 
-            <div className="space-y-1.5 text-xs text-[#1E3A2B] font-medium">
-              <p><strong className="text-[#0F5132]">Start State:</strong> Active profile v1.0.0, empty buffer.</p>
-              <p><strong className="text-[#0F5132]">Intended:</strong> Ingests 5 legitimate samples with natural drift (&Delta; &le; 1.8). Safely advances profile.</p>
-              <p><strong className="text-[#0F5132]">Expected Verdict:</strong> SAFE_ADAPTATION &rarr; v1.1.0.</p>
+            <div className="space-y-1.5 text-xs text-[#9D8EB9]">
+              <p><strong className="text-white">Start State:</strong> Active profile v1.0.0, empty buffer.</p>
+              <p><strong className="text-white">Intended:</strong> Ingests 5 legitimate samples with natural drift (&Delta; &le; 1.8). Safely advances profile.</p>
+              <p><strong className="text-white">Expected Verdict:</strong> SAFE_ADAPTATION &rarr; v1.1.0.</p>
             </div>
           </div>
 
           <button 
             onClick={runLegitimateAdaptationScenario}
             disabled={running !== null}
-            className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#2D8A4E] hover:bg-[#236F3E] disabled:opacity-50 text-white text-xs font-bold cursor-pointer transition-all active:scale-98 shadow-xs"
+            className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#7C3AED] hover:bg-[#6D28D9] disabled:opacity-50 text-white text-xs font-bold cursor-pointer transition-all active:scale-98 shadow-lg shadow-violet-900/30"
           >
             <Play className="w-3.5 h-3.5" />
             <span>{running === 'legitimate' ? 'Executing Steps (1-5)...' : 'Run Safe Adaptation'}</span>
           </button>
         </div>
 
-        {/* Scenario 2 Card - Filled Dusty Rose */}
-        <div className="bg-[#F5CCD7] border border-[#E49DAE] rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-sm">
+        {/* Scenario 2 Card */}
+        <div className="bg-[#120D1F] border border-[#271C3D] hover:border-[#5E1E49] rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl transition-all">
           <div className="space-y-3">
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2 text-[#881337]">
-                <ShieldAlert className="w-4 h-4" />
-                <h3 className="font-extrabold text-xs uppercase tracking-wider text-[#881337]">
+              <div className="flex items-center gap-2 text-[#F472B6]">
+                <ShieldAlert className="w-4 h-4 text-[#F472B6]" />
+                <h3 className="font-extrabold text-xs uppercase tracking-wider text-white">
                   Scenario 2: Impostor Takeover
                 </h3>
               </div>
-              <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-[#EBB4C3] text-[#650B25] border border-[#DF8FA3]">
+              <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-[#2D1226] text-[#F472B6] border border-[#5E1E49]">
                 Synthetic Attack
               </span>
             </div>
 
-            <div className="space-y-1.5 text-xs text-[#4A1525] font-medium">
-              <p><strong className="text-[#881337]">Start State:</strong> Active profile v1.0.0, streak 0/3.</p>
-              <p><strong className="text-[#881337]">Intended:</strong> Injects 3 erratic anomalies (&Delta; &gt; 1.8). Reaches streak ceiling and freezes.</p>
-              <p><strong className="text-[#881337]">Expected Verdict:</strong> PROFILE_FROZEN (Protection Active).</p>
+            <div className="space-y-1.5 text-xs text-[#9D8EB9]">
+              <p><strong className="text-white">Start State:</strong> Active profile v1.0.0, streak 0/3.</p>
+              <p><strong className="text-white">Intended:</strong> Injects 3 erratic anomalies (&Delta; &gt; 1.8). Reaches streak ceiling and freezes.</p>
+              <p><strong className="text-white">Expected Verdict:</strong> PROFILE_FROZEN (Protection Active).</p>
             </div>
           </div>
 
           <button 
             onClick={runSuddenTakeoverScenario}
             disabled={running !== null}
-            className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#BE123C] hover:bg-[#9F0E31] disabled:opacity-50 text-white text-xs font-bold cursor-pointer transition-all active:scale-98 shadow-xs"
+            className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#2D1226] hover:bg-[#3D1834] text-[#F472B6] border border-[#5E1E49] disabled:opacity-50 text-xs font-bold cursor-pointer transition-all active:scale-98 shadow-sm"
           >
             <ShieldAlert className="w-3.5 h-3.5" />
             <span>{running === 'takeover' ? 'Simulating Impostor...' : 'Simulate Impostor Attack'}</span>
           </button>
         </div>
 
-        {/* Scenario 3 Card - Filled Warm Peach */}
-        <div className="bg-[#F8DAC0] border border-[#EDB482] rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-sm">
+        {/* Scenario 3 Card */}
+        <div className="bg-[#120D1F] border border-[#271C3D] hover:border-[#382759] rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl transition-all">
           <div className="space-y-3">
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2 text-[#7C2D12]">
-                <Zap className="w-4 h-4" />
-                <h3 className="font-extrabold text-xs uppercase tracking-wider text-[#7C2D12]">
+              <div className="flex items-center gap-2 text-[#C4B5FD]">
+                <Zap className="w-4 h-4 text-[#8B5CF6]" />
+                <h3 className="font-extrabold text-xs uppercase tracking-wider text-white">
                   Scenario 3: Velocity Guardrail
                 </h3>
               </div>
-              <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-[#F1C39E] text-[#5C1D08] border border-[#E7A576]">
+              <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-[#1C142E] text-[#C4B5FD] border border-[#382759]">
                 Synthetic Boundary
               </span>
             </div>
 
-            <div className="space-y-1.5 text-xs text-[#4A2011] font-medium">
-              <p><strong className="text-[#7C2D12]">Start State:</strong> Active profile v1.0.0, standard rate limit.</p>
-              <p><strong className="text-[#7C2D12]">Intended:</strong> Submits observation exceeding velocity limit (3.80 &gt; 2.50). Rejects candidate.</p>
-              <p><strong className="text-[#7C2D12]">Expected Verdict:</strong> SUSPICIOUS_CHANGE (Bounded Reject).</p>
+            <div className="space-y-1.5 text-xs text-[#9D8EB9]">
+              <p><strong className="text-white">Start State:</strong> Active profile v1.0.0, standard rate limit.</p>
+              <p><strong className="text-white">Intended:</strong> Submits observation exceeding velocity limit (3.80 &gt; 2.50). Rejects candidate.</p>
+              <p><strong className="text-white">Expected Verdict:</strong> SUSPICIOUS_CHANGE (Bounded Reject).</p>
             </div>
           </div>
 
           <button 
             onClick={runVelocityFilterScenario}
             disabled={running !== null}
-            className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#C25E00] hover:bg-[#9E4C00] disabled:opacity-50 text-white text-xs font-bold cursor-pointer transition-all active:scale-98 shadow-xs"
+            className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#181228] hover:bg-[#251A3E] border border-[#382759] disabled:opacity-50 text-[#EDE9FE] text-xs font-bold cursor-pointer transition-all active:scale-98 shadow-sm"
           >
-            <Play className="w-3.5 h-3.5" />
+            <Play className="w-3.5 h-3.5 text-[#8B5CF6]" />
             <span>{running === 'velocity' ? 'Testing Guardrail...' : 'Test Velocity Guardrail'}</span>
           </button>
         </div>
       </div>
 
-      {/* Simulator Execution Audit Log - Filled Soft Lavender Console */}
-      <div className="bg-[#EAE1F7] border border-[#CDBEE5] rounded-2xl p-6 space-y-4 shadow-sm">
-        <div className="flex items-center justify-between border-b border-[#CDBEE5] pb-3">
-          <div className="flex items-center gap-2 text-[#593CA5]">
+      {/* Simulator Execution Audit Log */}
+      <div className="bg-[#120D1F] border border-[#271C3D] rounded-2xl p-6 space-y-4 shadow-xl">
+        <div className="flex items-center justify-between border-b border-[#271C3D] pb-3">
+          <div className="flex items-center gap-2 text-[#8B5CF6]">
             <Terminal className="w-4 h-4" />
-            <h3 className="text-xs font-extrabold uppercase tracking-wider text-[#1E2638]">
+            <h3 className="text-xs font-extrabold uppercase tracking-wider text-white">
               Simulation Event Stream &amp; State Trace ({logs.length} events)
             </h3>
           </div>
@@ -302,16 +302,16 @@ export const ResearchSimulators: React.FC<{ onScenarioComplete?: () => void }> =
             <button 
               onClick={handleSecurityReset}
               disabled={running !== null}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#D7C4F2] border border-[#BFA8E7] hover:bg-[#C8B2ED] text-[#431E8C] text-xs font-bold cursor-pointer transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#181228] border border-[#382759] hover:bg-[#251A3E] text-[#C4B5FD] text-xs font-bold cursor-pointer transition-colors"
             >
-              <RotateCcw className="w-3.5 h-3.5" />
+              <RotateCcw className="w-3.5 h-3.5 text-[#8B5CF6]" />
               <span>Reset &amp; Unfreeze Engine</span>
             </button>
 
             {logs.length > 0 && (
               <button 
                 onClick={() => setLogs([])}
-                className="text-xs text-[#593CA5] hover:underline font-bold cursor-pointer"
+                className="text-xs text-[#9D8EB9] hover:text-white font-bold cursor-pointer"
               >
                 Clear Log
               </button>
@@ -320,7 +320,7 @@ export const ResearchSimulators: React.FC<{ onScenarioComplete?: () => void }> =
         </div>
 
         {logs.length === 0 ? (
-          <div className="p-8 text-center text-xs text-[#431E8C] bg-[#DFD3F2] rounded-xl border border-[#C5B4E2] font-medium">
+          <div className="p-8 text-center text-xs text-[#9D8EB9] bg-[#0E0A18] rounded-xl border border-[#271C3D]">
             No simulation runs recorded yet. Click one of the scenario buttons above to execute a controlled functional verification test.
           </div>
         ) : (
@@ -330,28 +330,28 @@ export const ResearchSimulators: React.FC<{ onScenarioComplete?: () => void }> =
                 key={idx}
                 className={`p-3 rounded-xl border text-xs flex items-start gap-3 transition-colors ${
                   log.status === 'success' 
-                    ? 'bg-[#CCEBD4] border-[#9EDAA9] text-[#0F5132]' 
+                    ? 'bg-[#161224] border-[#382759] text-[#EDE9FE]' 
                     : log.status === 'warning'
-                    ? 'bg-[#F8DAC0] border-[#F0BF94] text-[#7C2D12]'
+                    ? 'bg-[#26152B] border-[#521D5E] text-[#F0ABFC]'
                     : log.status === 'error'
-                    ? 'bg-[#F5CCD7] border-[#EAAAB9] text-[#881337]'
-                    : 'bg-[#D8E7F7] border-[#ADC9EE] text-[#0A3B7B]'
+                    ? 'bg-[#2D1226] border-[#5E1E49] text-[#F472B6]'
+                    : 'bg-[#141021] border-[#271C3D] text-[#C4B5FD]'
                 }`}
               >
                 <div className="flex-shrink-0 mt-0.5">
-                  {log.status === 'success' && <CheckCircle2 className="w-4 h-4 text-[#15803D]" />}
-                  {log.status === 'warning' && <AlertTriangle className="w-4 h-4 text-[#D97706]" />}
-                  {log.status === 'error' && <AlertCircle className="w-4 h-4 text-[#E11D48]" />}
-                  {log.status === 'info' && <Info className="w-4 h-4 text-[#1D4ED8]" />}
+                  {log.status === 'success' && <CheckCircle2 className="w-4 h-4 text-[#A78BFA]" />}
+                  {log.status === 'warning' && <AlertTriangle className="w-4 h-4 text-[#E879F9]" />}
+                  {log.status === 'error' && <AlertCircle className="w-4 h-4 text-[#F472B6]" />}
+                  {log.status === 'info' && <Info className="w-4 h-4 text-[#8B5CF6]" />}
                 </div>
 
                 <div className="flex-1 space-y-0.5">
                   <div className="flex items-center gap-2">
-                    <span className="font-extrabold text-[11px] uppercase tracking-wider">{log.scenario}</span>
-                    <span className="text-[10px] font-mono opacity-80">Step {log.step} &bull; {log.timestamp}</span>
-                    <span className="text-[11px] font-bold">{log.action}</span>
+                    <span className="font-extrabold text-[11px] uppercase tracking-wider text-white">{log.scenario}</span>
+                    <span className="text-[10px] font-mono opacity-80 text-[#9D8EB9]">Step {log.step} &bull; {log.timestamp}</span>
+                    <span className="text-[11px] font-bold text-[#C4B5FD]">{log.action}</span>
                   </div>
-                  <p className="text-xs leading-relaxed opacity-95 font-medium">{log.details}</p>
+                  <p className="text-xs leading-relaxed opacity-95">{log.details}</p>
                 </div>
               </div>
             ))}
